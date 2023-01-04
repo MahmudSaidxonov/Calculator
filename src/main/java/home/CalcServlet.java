@@ -15,7 +15,7 @@ public class CalcServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter pw = resp.getWriter();
-        int num1, num2;
+        double num1, num2;
 
         pw.println("<center>");
         pw.println("""
@@ -31,7 +31,9 @@ public class CalcServlet extends HttpServlet {
             case "-" -> pw.println("<h1>Result: " + (num1 - num2) + "</h1>");
             case "*" -> pw.println("<h1>Result: " + (num1 * num2) + "</h1>");
             case "%" -> {
-                if (num1 % num2 != 0) {
+                if (num2 == 0) {
+                    pw.println("<h1>Undefined!</h1>");
+                } else if (num1 % num2 != 0) {
                     pw.println("<h1>Result: " + ((float)num1 / num2) + "</h1>");
                 }
                 else {
