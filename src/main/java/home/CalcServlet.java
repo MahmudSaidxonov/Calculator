@@ -42,28 +42,4 @@ public class CalcServlet extends HttpServlet {
         pw.println("<a href=index.html>BACK</a>");
         pw.println("</center>");
     }
-
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        resp.setContentType("text/html");
-//        PrintWriter pw = resp.getWriter();
-//        int num1, num2;
-//        String str = "";
-//        num1 = Integer.parseInt(req.getParameter("first"));
-//        num2 = Integer.parseInt(req.getParameter("second"));
-//        str = req.getParameter("operation");
-//
-//        if (str.equals("+")) {
-//            pw.println("<h1>Result: " + (num1 + num2) + "</h1>");
-//        }
-//        else if (str.equals("-")) {
-//            pw.println("Result: " + (num1 - num2));
-//        }
-//        else if (str.equals("*")) {
-//            pw.println("Result: " + (num1 * num2));
-//        }
-//        else {
-//            pw.println("Result: " + (num1 % num2));
-//        }
-//    }
 }
