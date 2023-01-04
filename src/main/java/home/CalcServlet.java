@@ -15,7 +15,7 @@ public class CalcServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter pw = resp.getWriter();
-        double num1, num2;
+        int num1, num2;
 
         pw.println("<center>");
         pw.println("""
